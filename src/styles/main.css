@@ -1,0 +1,190 @@
+/* src/styles/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Default (Day) theme */
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.day h1,
+body.day h2,
+body.day p,
+body.day a {
+  color: #333333;
+}
+
+body.day nav,
+body.day footer {
+  background-color: #f8f9fa;
+}
+
+/* Night theme */
+body.night {
+  background: linear-gradient(145deg, #333333, #1c1c1c); /* Charcoal gradient */
+  color: #7fffd4; /* Aqua text color */
+}
+
+body.night h1,
+body.night h2,
+body.night p,
+body.night a {
+  color: #7fffd4;
+}
+
+body.night nav,
+body.night footer {
+  background: #1c1c1c;
+}
+
+body.night a:hover {
+  color: #9bd4cb; /* Lighter aqua on hover */
+}
+
+
+/* Text animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 1.2s ease-out forwards;
+}
+
+/* Test tube tilt effect on hover */
+.test-tube {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.test-tube:hover {
+  transform: rotate(-15deg);
+}
+
+/* Liquid dripping effect */
+.liquid-drip {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85px;
+  height: 15px;
+  background: #7fffd4; /* Aqua color for the drip */
+  border-radius: 50%;
+  animation: drip 3s ease-out infinite;
+  opacity: 0.9;
+}
+
+/* Liquid drip animation */
+@keyframes drip {
+  0% {
+    height: 0;
+    width: 5px;
+    transform: translate(-50%, -10px);
+  }
+  50% {
+    height: 10px;
+    width: 25px;
+  }
+  100% {
+    height: 15px;
+    width: 80px;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Keyframes for continuous tilt */
+@keyframes continuousTilt {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Default style */
+.test-tube {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover tilt effect for non-mobile screens */
+.test-tube:hover {
+  transform: rotate(-15deg);
+}
+
+/* Continuous tilt on mobile screens */
+@media (max-width: 768px) {
+  .test-tube {
+    animation: continuousTilt 2s infinite ease-in-out;
+  }
+}
+
+/* Background gradient and shapes */
+.frenzy-background {
+  position: relative;
+  min-height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(145deg, rgba(128, 0, 128, 0.8), rgba(75, 0, 130, 0.6));
+  overflow: hidden; /* Hide overflow for shapes */
+}
+
+
+/* Abstract shapes */
+.frenzy-background::before,
+.frenzy-background::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.3;
+  pointer-events: none; /* Allow clicks through */
+}
+
+.frenzy-background::before {
+  background: rgba(255, 0, 255, 0.6);
+  top: 15%;
+  left: 8%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.frenzy-background::after {
+  background: rgba(0, 255, 255, 0.4);
+  bottom: 5%;
+  right: 5%;
+  transform: translate(50%, 50%) rotate(-30deg);
+}
+
+/* Welcome text styles */
+.welcome-text {
+  position: relative;
+  color: white; /* Text color */
+  text-align: center;
+  z-index: 1; /* Ensure text is above shapes */
+  margin-top: 20%;
+  font-size: 3rem; /* Adjust size as needed */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+/* nav active link */
+.active-link {
+  font-weight: bold;
+  color: #7C3AED; /* Customize to your theme color */
+}
+#mobileNavLinks{
+  z-index: 10;
+}
+

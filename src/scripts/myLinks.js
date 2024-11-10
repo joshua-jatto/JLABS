@@ -1,0 +1,1 @@
+export const currentCV = "https://drive.google.com/file/d/1iDQ9RsUi1Dmyfdv8kRpyaJQab0hg22cS/view?usp=sharing"

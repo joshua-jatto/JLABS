@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JLABS</title>
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+
+<body>
+  <!-- leftCurtain -->
+  <div class="bg-purple-800 h-full w-[20px] md:w-[50px] fixed top-0 left-0"></div>
+  <!-- rightCurtain -->
+  <div class="bg-purple-800 h-full w-[20px] md:w-[50px] fixed top-0 right-0"></div>
+  <header class="flex items-center justify-between w-[calc(100vw-100px)]">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full mx-auto shadow-md text-black z-10">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <a href="/" class="ml-2 text-xl font-bold">JLABS🧪</a>
+        <div class="flex flex-row gap-5">
+
+          <button id="menuToggle" class="md:hidden text-2xl focus:outline-none mr-2">
+            ☰
+          </button>
+          <ul id="navLinks" class="hidden md:flex space-x-6 mr-2">
+            <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+            <a href="/src/pages/about.html" class="hover:text-gray-400">About</a>
+            </li>
+            <li><a href="/src/pages/project.html" class="hover:text-gray-400">Projects</a></li>
+            <li>
+
+          </ul>
+
+          <button id="darkModeToggle" class=" text-white bg-black rounded-full text-xl focus:outline-none mr-2">
+            🌙
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!--mobile view-->
+    <ul id="mobileNavLinks"
+      class="hidden flex-col text-zinc-100 mx-auto items-center justify-evenly bg-purple-700 shadow-md font-semibold rounded-md space-x-2 mt-20 min-w-[40vw] min-h-[25vh] p-4 fixed right-6 top-0 scale-100 opacity-90">
+      <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+
+      <li>
+        <a href="/src/pages/about.html" class="hover:text-gray-400">About</a>
+      </li>
+
+      <li>
+        <a href="/src/pages/project.html" class="hover:text-gray-400">Project</a>
+      </li>
+
+    </ul>
+  </header>
+
+  <!-- About Section -->
+  <section
+    class="w-[90%] flex flex-col md:flex-row md:p-8 lg:p-10 justify-center items-start gap-2 mx-auto mt-[80px]  frenzy-background rounded-lg shadow-lg animate-fade-in"
+    style="background-image: url('/img/')">
+
+    <!-- Left Content Block -->
+    <div class="w-full md:w-[40%]  shadow-lg p-6 rounded-lg mx-auto">
+      <h1 class="text-lg sm:text-4xl md:text-3xl font-extrabold text-center  
+    text-transparent bg-clip-text p-4 sm:p-6 md:p-8 animate-fade-in">
+        About 🎈
+      </h1>
+
+      <p class="text-lg leading-8  mb-4">
+        Blending creativity with modern innovations: I am a React.js developer skilled in front-end technologies,
+        familiar with Node.js, Python, and TailwindCSS. My development stack is supported by certifications in
+        cybersecurity and tech from LinkedIn Learning, FORSAGE, ISC2, and CISCO SFA.
+      </p>
+      <p class="text-lg leading-8 ">
+        When I'm not coding, you’ll find me crafting aluminum windows at the
+        <a href="https://jatto-constructions.vercel.app/" target="_blank" rel="noopener noreferrer"
+          class="text-fuchsia-700 underline hover:text-purple-600 transition-colors duration-300">workshop</a>.
+        Balancing art and code, I am passionate about bringing creativity into all my work.
+      </p>
+
+      <!-- Tech Stack Section -->
+      <div class="flex flex-col items-center gap-4 mt-12 w-full text-center ring-1 ring-fuchsia-700 rounded-lg p-4">
+        <h2 class="text-xl font-bold mb-4 text-zinc-800">My Stacks</h2>
+        <ul class="flex flex-wrap justify-center gap-6">
+          <!-- GIthub Icon and Label -->
+          <li class="flex flex-col items-center text-yellow-500 hover:text-yellow-600 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0a12 12 0 00-3.719 23.426c.593.11.781-.257.781-.575 0-.285-.011-1.042-.015-2.046-3.028.658-3.667-1.462-3.667-1.462-.547-1.387-1.334-1.756-1.334-1.756-1.089-.743.083-.729.083-.729 1.205.085 1.839 1.235 1.839 1.235 1.071 1.833 2.809 1.304 3.492.998.108-.775.419-1.305.762-1.607-2.418-.276-4.954-1.208-4.954-5.373 0-1.186.425-2.159 1.118-2.918-.112-.276-.483-1.387.107-2.889 0 0 .906-.29 2.971 1.114a10.355 10.355 0 015.404 0c2.065-1.404 2.967-1.114 2.967-1.114.588 1.502.218 2.613.107 2.889.694.759 1.118 1.732 1.118 2.918 0 4.175-2.54 5.093-4.96 5.37.431.37.819 1.102.819 2.222 0 1.606-.015 2.898-.015 3.293 0 .321.192.694.8.576A12 12 0 0012 0z" />
+            </svg>
+            <span class="text-sm font-semibold">Github</span>
+          </li>
+          <!-- React Icon and Label -->
+          <li class="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
+            <svg w-10 h-10 viewBox="0 0 569 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>React-Logo-Filled (1)</title>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="React-Logo-Filled-(1)" fill="#087EA4" fill-rule="nonzero">
+                      <path d="M285.5,201 C255.400481,201 231,225.400481 231,255.5 C231,285.599519 255.400481,310 285.5,310 C315.599519,310 340,285.599519 340,255.5 C340,225.400481 315.599519,201 285.5,201" id="Path"></path>
+                      <path d="M568.959856,255.99437 C568.959856,213.207656 529.337802,175.68144 466.251623,150.985214 C467.094645,145.423543 467.85738,139.922107 468.399323,134.521063 C474.621631,73.0415145 459.808523,28.6686204 426.709856,9.5541429 C389.677085,-11.8291748 337.36955,3.69129898 284.479928,46.0162134 C231.590306,3.69129898 179.282771,-11.8291748 142.25,9.5541429 C109.151333,28.6686204 94.3382249,73.0415145 100.560533,134.521063 C101.102476,139.922107 101.845139,145.443621 102.708233,151.02537 C97.4493791,153.033193 92.2908847,155.161486 87.3331099,157.39017 C31.0111824,182.708821 0,217.765415 0,255.99437 C0,298.781084 39.6220545,336.307301 102.708233,361.003527 C101.845139,366.565197 101.102476,372.066633 100.560533,377.467678 C94.3382249,438.947226 109.151333,483.32012 142.25,502.434597 C153.629683,508.887578 166.52439,512.186771 179.603923,511.991836 C210.956328,511.991836 247.567589,495.487529 284.479928,465.972527 C321.372196,495.487529 358.003528,511.991836 389.396077,511.991836 C402.475265,512.183856 415.36922,508.884856 426.75,502.434597 C459.848667,483.32012 474.661775,438.947226 468.439467,377.467678 C467.897524,372.066633 467.134789,366.565197 466.291767,361.003527 C529.377946,336.347457 569,298.761006 569,255.99437 M389.155214,27.1025182 C397.565154,26.899606 405.877839,28.9368502 413.241569,33.0055186 C436.223966,46.2772304 446.540955,82.2775015 441.522965,131.770345 C441.181741,135.143488 440.780302,138.556788 440.298575,141.990165 C414.066922,134.08804 387.205771,128.452154 360.010724,125.144528 C343.525021,103.224055 325.192524,82.7564475 305.214266,63.9661533 C336.586743,39.7116483 366.032313,27.1025182 389.135142,27.1025182 M378.356498,310.205598 C368.204912,327.830733 357.150626,344.919965 345.237759,361.405091 C325.045049,363.479997 304.758818,364.51205 284.459856,364.497299 C264.167589,364.51136 243.888075,363.479308 223.702025,361.405091 C211.820914,344.919381 200.80007,327.83006 190.683646,310.205598 C180.532593,292.629285 171.306974,274.534187 163.044553,255.99437 C171.306974,237.454554 180.532593,219.359455 190.683646,201.783142 C200.784121,184.229367 211.770999,167.201087 223.601665,150.764353 C243.824636,148.63809 264.145559,147.579168 284.479928,147.591877 C304.772146,147.579725 325.051559,148.611772 345.237759,150.68404 C357.109048,167.14607 368.136094,184.201112 378.27621,201.783142 C388.419418,219.363718 397.644825,237.458403 405.915303,255.99437 C397.644825,274.530337 388.419418,292.625022 378.27621,310.205598 M419.724813,290.127366 C426.09516,307.503536 431.324985,325.277083 435.380944,343.334682 C417.779633,348.823635 399.836793,353.149774 381.668372,356.285142 C388.573127,345.871232 395.263781,335.035679 401.740334,323.778483 C408.143291,312.655143 414.144807,301.431411 419.805101,290.207679 M246.363271,390.377981 C258.848032,391.140954 271.593728,391.582675 284.5,391.582675 C297.406272,391.582675 310.232256,391.140954 322.737089,390.377981 C310.880643,404.583418 298.10766,417.997563 284.5,430.534446 C270.921643,417.999548 258.18192,404.585125 246.363271,390.377981 Z M187.311556,356.244986 C169.137286,353.123646 151.187726,348.810918 133.578912,343.334682 C137.618549,325.305649 142.828222,307.559058 149.174827,290.207679 C154.754833,301.431411 160.736278,312.655143 167.239594,323.778483 C173.74291,334.901824 180.467017,345.864539 187.311556,356.285142 M149.174827,221.760984 C142.850954,204.473938 137.654787,186.794745 133.619056,168.834762 C151.18418,163.352378 169.085653,159.013101 187.211197,155.844146 C180.346585,166.224592 173.622478,176.986525 167.139234,188.210257 C160.65599,199.433989 154.734761,210.517173 149.074467,221.760984 M322.616657,121.590681 C310.131896,120.827708 297.3862,120.385987 284.379568,120.385987 C271.479987,120.385987 258.767744,120.787552 246.242839,121.590681 C258.061488,107.383537 270.801211,93.9691137 284.379568,81.4342157 C297.99241,93.9658277 310.765727,107.380324 322.616657,121.590681 Z M401.70019,188.210257 C395.196875,176.939676 388.472767,166.09743 381.527868,155.68352 C399.744224,158.819049 417.734224,163.151949 435.380944,168.654058 C431.331963,186.680673 426.122466,204.426664 419.785029,221.781062 C414.205023,210.55733 408.203506,199.333598 401.720262,188.230335 M127.517179,131.790423 C122.438973,82.3176579 132.816178,46.2973086 155.778503,33.0255968 C163.144699,28.9632474 171.455651,26.9264282 179.864858,27.1225964 C202.967687,27.1225964 232.413257,39.7317265 263.785734,63.9862316 C243.794133,82.7898734 225.448298,103.270812 208.949132,125.204763 C181.761691,128.528025 154.90355,134.14313 128.661281,141.990165 C128.199626,138.556788 127.778115,135.163566 127.456963,131.790423 M98.4529773,182.106474 C101.54406,180.767925 104.695358,179.429376 107.906872,178.090828 C114.220532,204.735668 122.781793,230.7969 133.498624,255.99437 C122.761529,281.241316 114.193296,307.357063 107.8868,334.058539 C56.7434387,313.076786 27.0971497,284.003505 27.0971497,255.99437 C27.0971497,229.450947 53.1907013,202.526037 98.4529773,182.106474 Z M155.778503,478.963143 C132.816178,465.691432 122.438973,429.671082 127.517179,380.198317 C127.838331,376.825174 128.259842,373.431953 128.721497,369.978497 C154.953686,377.878517 181.814655,383.514365 209.009348,386.824134 C225.500295,408.752719 243.832321,429.233234 263.805806,448.042665 C220.069,481.834331 180.105722,492.97775 155.838719,478.963143 M441.502893,380.198317 C446.520883,429.691161 436.203894,465.691432 413.221497,478.963143 C388.974566,493.017906 348.991216,481.834331 305.274481,448.042665 C325.241364,429.232737 343.566681,408.752215 360.050868,386.824134 C387.245915,383.516508 414.107066,377.880622 440.338719,369.978497 C440.820446,373.431953 441.221885,376.825174 441.563109,380.198317 M461.193488,334.018382 C454.869166,307.332523 446.294494,281.231049 435.561592,255.99437 C446.289797,230.744081 454.857778,204.629101 461.173416,177.930202 C512.216417,198.911955 541.942994,227.985236 541.942994,255.99437 C541.942994,284.003505 512.296705,313.076786 461.153344,334.058539" id="Shape"></path>
+                  </g>
+              </g>
+          </svg>
+            <span class="text-sm font-semibold">React.js</span>
+          </li>
+          <!-- Tailwind CSS Icon and Label -->
+          <li class="flex flex-col items-center text-cyan-600 hover:text-cyan-700 transition-colors duration-300">
+            
+            <svg class="w-10 h-10" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>file_type_tailwind</title><path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z" style="fill:#44a8b3"/></svg>
+            <span class="text-sm font-semibold">Tailwind CSS</span>
+          </li>
+          <!-- TypeScript Icon and Label -->
+          <li class="flex flex-col items-center text-blue-700 hover:text-blue-800 transition-colors duration-300">
+            <svg class="w-10 h-10" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>file_type_typescript</title><path d="M23.827,8.243A4.424,4.424,0,0,1,26.05,9.524a5.853,5.853,0,0,1,.852,1.143c.011.045-1.534,1.083-2.471,1.662-.034.023-.169-.124-.322-.35a2.014,2.014,0,0,0-1.67-1c-1.077-.074-1.771.49-1.766,1.433a1.3,1.3,0,0,0,.153.666c.237.49.677.784,2.059,1.383,2.544,1.095,3.636,1.817,4.31,2.843a5.158,5.158,0,0,1,.416,4.333,4.764,4.764,0,0,1-3.932,2.815,10.9,10.9,0,0,1-2.708-.028,6.531,6.531,0,0,1-3.616-1.884,6.278,6.278,0,0,1-.926-1.371,2.655,2.655,0,0,1,.327-.208c.158-.09.756-.434,1.32-.761L19.1,19.6l.214.312a4.771,4.771,0,0,0,1.35,1.292,3.3,3.3,0,0,0,3.458-.175,1.545,1.545,0,0,0,.2-1.974c-.276-.395-.84-.727-2.443-1.422a8.8,8.8,0,0,1-3.349-2.055,4.687,4.687,0,0,1-.976-1.777,7.116,7.116,0,0,1-.062-2.268,4.332,4.332,0,0,1,3.644-3.374A9,9,0,0,1,23.827,8.243ZM15.484,9.726l.011,1.454h-4.63V24.328H7.6V11.183H2.97V9.755A13.986,13.986,0,0,1,3.01,8.289c.017-.023,2.832-.034,6.245-.028l6.211.017Z" style="fill:#007acc"/></svg>
+            <span class="text-sm font-semibold">TypeScript</span>
+          </li>
+          <!-- Plus Icon for Additional Skills -->
+          <li class="flex flex-col items-center text-gray-600 hover:text-gray-700 transition-colors duration-300">
+           
+            <svg class="w-10 h-10" viewBox="-52.5 0 361 361" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M127.844 360.088L23.662 331.166.445 70.766h255.11l-23.241 260.36-104.47 28.962z" fill="#264DE4"/><path d="M212.417 314.547l19.86-222.49H128V337.95l84.417-23.403z" fill="#2965F1"/><path d="M53.669 188.636l2.862 31.937H128v-31.937H53.669zM47.917 123.995l2.903 31.937H128v-31.937H47.917zM128 271.58l-.14.037-35.568-9.604-2.274-25.471h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58z" fill="#EBEBEB"/><path d="M60.484 0h38.68v16.176H76.66v16.176h22.506v16.175H60.484V0zM106.901 0h38.681v14.066h-22.505v2.813h22.505v32.352h-38.68V34.46h22.505v-2.813H106.9V0zM153.319 0H192v14.066h-22.505v2.813H192v32.352h-38.681V34.46h22.505v-2.813H153.32V0z"/><path d="M202.127 188.636l5.765-64.641H127.89v31.937h45.002l-2.906 32.704H127.89v31.937h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576z" fill="#FFF"/></svg>
+            <span class="text-sm font-semibold">More+</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Right Content Block -->
+    <div class="w-full md:w-[40%] flex flex-col items-center p-6 shadow-lg  rounded-lg mx-auto">
+
+      <!-- Profile Image -->
+      <div class="p-2 sm:ring-2 ring-fuchsia-700">
+        <img src="https://avatars.githubusercontent.com/u/111055988?v=4" alt="profile-picture"
+        class="rounded-full w-60 h-60 mb-5 shadow-md transition-transform duration-500 hover:scale-105 "  />
+      </div>
+      
+
+      <!-- Name & Title -->
+      <div class="text-center mt-4">
+        <h2 class="font-bold text-2xl text-gray-800">Joshua Jatto</h2>
+        <p class="text-gray-600 mt-1">Frontend Developer +</p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col items-center gap-4 mt-6">
+        <a class="w-48 bg-fuchsia-700 text-white text-center font-semibold py-3 rounded-md hover:bg-fuchsia-800 transition duration-300"
+        id="cv"
+          href="" target="_blank"
+          >Download CV</a>
+        <button id="wa-connect"
+          class="w-48 bg-fuchsia-100 text-fuchsia-700 font-semibold py-3 rounded-md hover:bg-fuchsia-200 hover:text-fuchsia-800 transition duration-300 animate-pulse hover:animate-none">Connect
+          with me</button>
+      </div>
+
+      <!-- Contact Links -->
+      <div class="flex flex-col items-center gap-4 mt-8 w-full text-center ring-1 ring-fuchsia-700 rounded-lg p-4">
+        <ul class="flex flex-col flex-wrap md:flex-row items-start gap-4">
+          <li>
+            <a href="https://web.facebook.com/joshua.jatto.7/" target="_blank"
+              class="flex items-center text-purple-600 hover:text-purple-700 transition-colors duration-300 gap-2">
+              <!-- Facebook Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22.675 0h-21.35c-.734 0-1.325.591-1.325 1.325v21.351c0 .733.591 1.324 1.325 1.324h11.495v-9.284h-3.124v-3.622h3.124v-2.671c0-3.066 1.872-4.741 4.607-4.741 1.311 0 2.437.098 2.765.141v3.208l-1.899.001c-1.49 0-1.779.708-1.779 1.746v2.315h3.562l-.465 3.622h-3.097v9.284h6.074c.734 0 1.325-.591 1.325-1.324v-21.351c0-.734-.591-1.325-1.325-1.325z" />
+              </svg>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/myjatto?trk=contact-info" target="_blank"
+              class="flex items-center text-purple-600 hover:text-purple-700 transition-colors duration-300 gap-2">
+              <!-- LinkedIn Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19.716 3h-15.432c-.935 0-1.698.763-1.698 1.697v15.414c0 .935.763 1.698 1.698 1.698h15.432c.935 0 1.698-.763 1.698-1.698v-15.414c0-.935-.763-1.697-1.698-1.697zm-10.448 15.388h-3.012v-8.723h3.012v8.723zm-1.506-9.904c-.964 0-1.746-.781-1.746-1.746s.782-1.746 1.746-1.746c.964 0 1.746.782 1.746 1.746s-.782 1.746-1.746 1.746zm12.15 9.904h-3.012v-4.255c0-1.015-.02-2.318-1.409-2.318-1.41 0-1.627 1.101-1.627 2.239v4.334h-3.012v-8.723h2.89v1.191h.042c.402-.762 1.379-1.565 2.84-1.565 3.04 0 3.602 2.003 3.602 4.609v4.488z" />
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/joshua-jatto" target="_blank"
+              class="flex items-center text-purple-600 hover:text-purple-700 transition-colors duration-300 gap-2">
+              <!-- GitHub Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 .5a12 12 0 00-3.793 23.397c.6.111.793-.26.793-.578 0-.286-.01-1.043-.015-2.047-3.025.657-3.662-1.462-3.662-1.462-.546-1.387-1.332-1.756-1.332-1.756-1.088-.743.083-.729.083-.729 1.204.085 1.837 1.235 1.837 1.235 1.07 1.833 2.807 1.304 3.49.997.108-.775.418-1.305.76-1.606-2.413-.276-4.948-1.207-4.948-5.37 0-1.186.424-2.158 1.116-2.918-.111-.276-.482-1.387.106-2.889 0 0 .906-.29 2.968 1.113a10.35 10.35 0 015.404 0c2.06-1.403 2.964-1.113 2.964-1.113.588 1.502.218 2.613.107 2.889.694.76 1.115 1.732 1.115 2.918 0 4.175-2.539 5.092-4.958 5.36.431.37.816 1.102.816 2.222 0 1.605-.015 2.898-.015 3.293 0 .321.19.694.8.576A12.005 12.005 0 0012 .5z" />
+              </svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-black p-4">
+    <div class="container mx-auto text-center">
+      <p>
+        &copy; 2024 JLABS<span class="test-tube">🧪</span>. All rights
+        reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="/src/scripts/main.js"></script>
+</body>
+
+</html>

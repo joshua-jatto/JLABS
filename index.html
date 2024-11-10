@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JLABS</title>
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- leftCurtain -->
+  <div class="bg-purple-800 h-full w-[20px]  md:w-[40px] fixed top-0 left-0 "></div>
+  <!-- rightCurtain -->
+  <div class="bg-purple-800 h-full w-[20px]  md:w-[40px] fixed top-0 right-0 "></div>
+
+  <header class="flex items-center justify-between w-[calc(100vw-100px)]">
+
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 w-full rounded-md mt-4 md:w-full md:ml-0 md:rounded-none md:mt-0  mx-auto shadow-md text-black z-10">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <h1 class="ml-2 text-xl font-bold ">JLABS🧪</h1>
+        <div class="flex flex-row gap-5">
+       
+        <button id="menuToggle" class="md:hidden text-2xl focus:outline-none mr-2">
+          ☰
+        </button>
+        <ul id="navLinks" class="hidden md:flex space-x-6 mr-2">
+          <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+          <a href="/src/pages/about.html" class="hover:text-gray-400">About</a>
+          </li>
+          <li><a href="/src/pages/project.html" class="hover:text-gray-400">Projects</a></li>
+          <li>
+
+        </ul>
+
+        <button id="darkModeToggle" class=" text-white bg-black rounded-full text-xl focus:outline-none mr-2">
+          🌙
+        </button>
+      </div>
+      </div>
+    </nav>
+    <!--mobile view-->
+    <ul id="mobileNavLinks"
+      class="hidden flex-col text-zinc-100 mx-auto items-center justify-evenly bg-purple-700 shadow-md  font-semibold rounded-md space-x-2 mt-20 min-w-[30vw] min-h-[25vh] p-4 fixed right-10 top-2 scale-100 opacity-95 ">
+      <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+
+      <a href="/src/pages/about.html" class="hover:text-gray-400">About</a>
+      </li>
+
+      <li><a href="/src/pages/project.html" class="hover:text-gray-400">Project</a></li>
+    </ul>
+
+  </header>
+
+  <!-- Landing Page / home -->
+  <section id="home" class=" flex items-center justify-center min-h-screen bg-cover bg-center frenzy-background"
+    style="background-image: url('/img/')">
+    <svg class=" absolute top-[10vh] md:top-[25vh] mx-auto rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100"
+      height="100">
+      <circle cx="50" cy="50" r="100" fill="none" />
+      <path d="M30 50 L50 30 L70 50 Z" fill="rgba(255, 0, 0, 0.6)" />
+    </svg>
+    <div class=" absolute top-[20vh] md:top-[60vh]  px-10  md:flex text-center mx-auto  items-center md:size-[300px] animate-pulse ">
+      <!-- dynamic qoutes appears here -->
+      
+      <blockquote id="qoute-box"></blockquote>
+      <script src="./src/scripts/qouteMachine.js"></script>
+    </div>
+
+    <div class="text-center text-black p-6 relative overflow-hidden">
+      <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-center 
+        text-transparent bg-clip-text p-4 sm:p-6 md:p-8 ">
+        Welcome to JLABS<span class="test-tube">🧪</span>
+      </h1>
+      <p class="text-md -mt-5 font-sans font-semibold animate-slide-in"> Discover |  Learn  | Be better.</p>
+      <!-- Dripping liquid effect container -->
+      <div class="liquid-drip opacity-30"></div>
+
+      
+
+    </div>
+    
+    <div class="left-[20%] md:hidden text-center mx-auto absolute animate-pulse bottom-[20vh] z-10">
+      <!-- dynamic qoutes appears here -->
+      
+      <blockquote id="qoute-box"></blockquote>
+      <script src="./src/scripts/qouteMachine.js"></script>
+    </div>
+
+
+  </section>
+ 
+  <!-- Recent / Hot Section -->
+
+  <!-- Recent / Hot Section -->
+<div class="max-w-[80vw] mx-auto p-2 my-10 rounded-md shadow-inner " >
+  <div>
+    <h4 class="font-bold text-4xl mb-4 ml-15 text-center text-fuchsia-700 animate-pulse">Recent projects:</h4>
+   
+  <main id="recent-projects" class="w-full flex flex-row gap-1 bg-gradient-to-t">
+    <!-- Dynamic cards will be appended here by JavaScript -->
+  </main>
+  </div>
+  
+  <div>
+    <h4 class="font-bold text-4xl ml-15 mt-10 mb-4 text-center  text-fuchsia-700 animate-pulse">Learn to Code:</h4>
+  <p class="text-md text-center font-semibold">
+    wanna get started in tech? <br>Check out these amazinig resources! 
+  </p>
+  <main id="learn-coding" class="w-full flex flex-col">
+    <!-- Dynamic cards will be appended here by JavaScript -->
+  </main>
+  </div>
+  
+  <script type="module" src="/src/scripts/load-section-data.js"></script>
+</div>
+
+
+  
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-black p-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 JLABS🧪. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+
+</html>
