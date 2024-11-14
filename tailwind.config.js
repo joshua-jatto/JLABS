@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./**/*.{html,js}",
     "./index.html",
-    "./pages.js",
+    "/pages/*.{html,js}",
     "!./node_modules" // Adjust according to your project structure,
   ],
   theme: {
