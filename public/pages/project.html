@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JLABS</title>
-  <link rel="stylesheet" href="/src/styles/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/main.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
 
 </head>
 
@@ -28,9 +28,9 @@
           </button>
           <ul id="navLinks" class="hidden md:flex space-x-6 mr-2">
             <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
-            <a href="/src/pages/about.html" class="hover:text-gray-400">About</a>
+            <a href="/pages/about.html" class="hover:text-gray-400">About</a>
             </li>
-            <li><a href="/src/pages/project.html" class="hover:text-gray-400">Projects</a></li>
+            <li><a href="/pages/project.html" class="hover:text-gray-400">Projects</a></li>
             <li>
   
           </ul>
@@ -46,9 +46,9 @@
       class="hidden flex-col text-zinc-100 mx-auto items-center justify-evenly bg-purple-700 shadow-md font-semibold rounded-md space-x-2 mt-20 min-w-[40vw] min-h-[25vh] p-4 fixed right-6 top-0 scale-100 opacity-90 ">
       <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
       
-        <a href="/src/pages/about.html" class="hover:text-gray-400">About</a>
+        <a href="/pages/about.html" class="hover:text-gray-400">About</a>
       </li>
-      <li><a href="/src/pages/project.html" class="hover:text-gray-400">Projects</a></li>
+      <li><a hrhref="/pages/project.html" class="hover:text-gray-400">Projects</a></li>
     </ul>
 
   </div>
@@ -56,7 +56,7 @@
 
   <!-- project Content -->
   <section
-    class="w-[90%] flex flex-col md:flex-row md:p-10 lg:p-15 justify-center items-start gap-10 mx-auto mt-[80px]  rounded-lg shadow-lg"
+    class="w-[80%] flex flex-col md:flex-row md:p-10 lg:p-15 justify-center items-start gap-10 mx-auto mt-[80px]  rounded-lg shadow-lg"
     >
     <main class="container mx-auto px-4 py-10 -mt-10">
       <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-center 
@@ -68,7 +68,6 @@
       <section id="project-posts" class="flex flex-col md:flex-row md:flex-wrap gap-8 mt-8">
         <!-- project posts will be dynamically generated here -->
       </section>
-      <script type="module" src="/src/scripts/project-main.js"></script>
     </main>
   </section>
 
@@ -81,7 +80,8 @@
     </div>
   </footer>
 
-  <script src="/src/scripts/main.js"></script>
+  <script type="module" src="/scripts/load-projectData.js"></script>
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>

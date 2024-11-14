@@ -1,7 +1,7 @@
-import recentProjects from "./project-data.js";
-import learnCodingArticles from "./articles-data.js";
+import {projectData} from "./data.js";
+import {learnCodingArticles} from "./data.js";
 
-const recent = [...recentProjects]; //spreads imported objects into an array
+const recent = [...projectData]; //spreads imported objects into an array
 const topRecent = recent.slice(0, 3); //create new array with first three objects from recents array
 
 

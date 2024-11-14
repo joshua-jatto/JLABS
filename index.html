@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JLABS</title>
-  <link rel="stylesheet" href="/src/styles/main.css" />
+  <link rel="stylesheet" href="/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 
 </head>
@@ -30,9 +30,9 @@
         </button>
         <ul id="navLinks" class="hidden md:flex space-x-6 mr-2">
           <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
-          <a href="/src/pages/about.html" class="hover:text-gray-400">About</a>
+          <a href="/pages/about.html" class="hover:text-gray-400">About</a>
           </li>
-          <li><a href="/src/pages/project.html" class="hover:text-gray-400">Projects</a></li>
+          <li><a href="/pages/project.html" class="hover:text-gray-400">Projects</a></li>
           <li>
 
         </ul>
@@ -48,10 +48,10 @@
       class="hidden flex-col text-zinc-100 mx-auto items-center justify-evenly bg-purple-700 shadow-md  font-semibold rounded-md space-x-2 mt-20 min-w-[30vw] min-h-[25vh] p-4 fixed right-10 top-2 scale-100 opacity-95 ">
       <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
 
-      <a href="/src/pages/about.html" class="hover:text-gray-400">About</a>
+      <a href="/pages/about.html" class="hover:text-gray-400">About</a>
       </li>
 
-      <li><a href="/src/pages/project.html" class="hover:text-gray-400">Project</a></li>
+      <li><a href="/pages/project.html" class="hover:text-gray-400">Project</a></li>
     </ul>
 
   </header>
@@ -67,8 +67,8 @@
     <div class=" absolute top-[20vh] md:top-[60vh]  px-10  md:flex text-center mx-auto  items-center md:size-[300px] animate-pulse ">
       <!-- dynamic qoutes appears here -->
       
-      <blockquote id="qoute-box"></blockquote>
-      <script src="./src/scripts/qouteMachine.js"></script>
+      <blockquote id="quote-box"></blockquote>
+
     </div>
 
     <div class="text-center text-black p-6 relative overflow-hidden">
@@ -87,8 +87,8 @@
     <div class="left-[20%] md:hidden text-center mx-auto absolute animate-pulse bottom-[20vh] z-10">
       <!-- dynamic qoutes appears here -->
       
-      <blockquote id="qoute-box"></blockquote>
-      <script src="./src/scripts/qouteMachine.js"></script>
+      <blockquote id="quote-box"></blockquote>
+      <script src="./scripts/quoteMachine.js"></script>
     </div>
 
 
@@ -116,7 +116,7 @@
   </main>
   </div>
   
-  <script type="module" src="/src/scripts/load-section-data.js"></script>
+  <script type="module" src="/scripts/load-section-data.js"></script>
 </div>
 
 
@@ -130,7 +130,7 @@
     </div>
   </footer>
 
-  <script type="module" src="/src/scripts/main.js"></script>
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>

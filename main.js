@@ -1,12 +1,3 @@
-// import {currentCV}  from "./myLinks.js"; //attempts to import cv link from external js file
-
-const menuToggle = document.getElementById("menuToggle");
-const darkModeToggle = document.getElementById("darkModeToggle");
-const navLinks = document.getElementById("navLinks");
-const mobileNavLinks = document.getElementById("mobileNavLinks");
-const nav = document.getElementById("nav");
-const waConnect = document.getElementById("wa-connect");
-
 //mobile-nav functionality
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menuToggle");
@@ -56,18 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//appends cv link to html a-tag // connect with functionality
 document.addEventListener("DOMContentLoaded", () => {
-  const cv = document.getElementById("cv");
-  //#TODO try storing cv link in an external var export file
-  cv.href = "https://drive.google.com/file/d/1iDQ9RsUi1Dmyfdv8kRpyaJQab0hg22cS/view?usp=sharing";
-});
-
-
-waConnect.addEventListener('click',()=>{
-  // Replace PHONE_NUMBER with the desired phone number, including country code.
-  const phoneNumber = '+2348127967257'; 
-  const message = encodeURIComponent('Hello Joshua, can we collabrate on....?');
-  const url = `https://wa.me/${phoneNumber}?text=${message}`;
-  window.location.href = url;
+  const waConnect = document.getElementById("wa-connect");
+  waConnect.addEventListener("click", () => {
+    // Replace PHONE_NUMBER with the desired phone number, including country code.
+    const phoneNumber = "+2348127967257";
+    const message = encodeURIComponent(
+      "Hello Joshua, can we collabrate on....?"
+    );
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.location.href = url;
+  });
 });
