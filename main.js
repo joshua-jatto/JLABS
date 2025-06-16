@@ -1,5 +1,4 @@
-import {projectData}  from "/scripts/data.js"
-
+import { projectData } from "/scripts/data.js";
 
 //mobile-nav functionality
 document.addEventListener("DOMContentLoaded", () => {
@@ -63,15 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = url;
     });
   }
-    
-  
- 
 });
-
 
 //handles rendering of projects from imported array
 function displayProjects(projects) {
   const projectContainer = document.getElementById("project-posts");
+  console.log(projectContainer);
 
   projects.forEach((project) => {
     const projectElement = document.createElement("div");
@@ -113,9 +109,14 @@ function displayProjects(projects) {
       `;
     projectContainer.appendChild(projectElement);
   });
-};
+}
 
 // renders projects dynamically to projects page
 document.addEventListener("DOMContentLoaded", () => {
   displayProjects(projectData);
 });
+
+
+setInterval(() => {
+  document.getElementById('clock').textContent = new Date().toLocaleTimeString();
+}, 1000);

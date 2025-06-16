@@ -10,22 +10,24 @@ document.addEventListener("DOMContentLoaded", () => {
   loadArticles("learn-coding", learnCodingArticles);
 });
 
-//handles loading of recent project to html
+// Handles loading of recent projects to HTML
 function loadRecentprojects(containerId, data) {
   const container = document.getElementById(containerId);
-  container.className +=
-    " md:overflow-x-hidden overflow-x-auto hover:overflow-x-auto flex flex-row justify-center items-start";
-
+  // Remove existing flex classes to use grid layout
+  // container.classList.remove("flex", "flex-row", "justify-center");
+  
   data.forEach((item) => {
     const card = document.createElement("section");
-    card.className =
-      "flex justify-center mx-auto items-center rounded-lg overflow-hidden shadow-sm mt-4";
-
+    card.className = "w-full h-full transition-all duration-300 hover:scale-[1.02]";
+    
     card.innerHTML = `
-      <a href="${item.liveLink}"  class="ring-2 ring-green-500 rounded-xl  flex flex-col p-2 items-center justify-center gap-2  hover:opacity-[.9] shadow-xl mt-2" target="_blank">
-        <img src="${item.image}" alt="${item.title}" class="w-[40px] h-[40px] ring-3 ring-green-500 md:w-[120px] md:h-[120px] object-cover rounded-full">
-        <h2 class="text-center text-black text-md md:text-[1rem] font-semibold mb-3 -ml-2  py-2">${item.title}</h2>
-        <p class=" text-right text-sm text-green-300 md:text-[2rem] mt-0">✔</p>
+      <a href="${item.liveLink}" class=" bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-green-500/50 rounded-xl p-4 h-full flex flex-col items-center justify-between gap-3 shadow-lg hover:shadow-green-500/20 hover:border-green-400 transition-all duration-300 group">
+        <div class="flex flex-col items-center gap-3">
+          <img src="${item.image}" alt="${item.title}" class="w-16 h-16 md:w-20 md:h-20 object-contain rounded-lg bg-gray-700 p-2 border border-green-500/30 group-hover:border-green-400 transition-colors">
+          <h2 class="text-center text-white text-base md:text-sm font-bold mt-2">${item.title}</h2>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center group-hover:bg-green-500/40 transition-colors">
+        </div>
       </a>
     `;
 
@@ -33,23 +35,30 @@ function loadRecentprojects(containerId, data) {
   });
 }
 
-//handles loading of learning resources links to html
+// Handles loading of learning resources links to HTML
 function loadArticles(containerId, data) {
   const container = document.getElementById(containerId);
-  container.className +=
-    " md:overflow-x-hidden overflow-x-auto hover:overflow-x-auto md:flex-row justify-center gap-2 mx-auto";
-
+  // Remove existing flex classes to use grid layout
+  // container.classList.remove("flex", "flex-col", "items-center");
+  
   data.forEach((item) => {
-    const card = document.createElement("section");
-    card.className =
-      "flex flex-col rounded-lg overflow-hidden ring-gray-200 shadow-md";
-
+    const card = document.createElement("div");
+    card.className = "w-full h-full transition-all duration-300 hover:scale-[1.02]";
+    
     card.innerHTML = `
-      <a href="${item.link}" class=" w-full p-4 hover:opacity-[.9] shadow-xl  rounded-md mt-2 hover:animate-pulse">
-        <img src="${item.image}" alt="${item.title}" class="w-[100%] h-[200px] md:w-[250px] mx-auto object-contain rounded-md shadow-sm">
-        <div class="truncate -mt-1">
-          <h2 class="text-left text-black text-md font-semibold">${item.title}</h2>
-          <p class="text-left text-sm text-wrap text-green-300 mt-0">${item.description.substring(0, 45)}...</p>
+      <a href="${item.link}" class=" bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-5 h-full flex flex-col gap-4 shadow-lg hover:shadow-purple-500/20 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 group">
+        <div class="bg-gray-900/50 border border-gray-700 rounded-lg p-3 flex justify-center">
+          <img src="${item.image}" alt="${item.title}" class="w-[120px] h-[120px] md:w-[140px] md:h-[140px] object-contain rounded-md">
+        </div>
+        <div class="flex-1 flex flex-col">
+          <h2 class="text-white text-lg font-bold mb-2 group-hover:text-purple-400 transition-colors">${item.title}</h2>
+          <p class="text-gray-400 text-sm md:text-base flex-1 line-clamp-3 truncate(10)">${item.description}</p>
+          <span class="mt-4 text-purple-500 font-medium text-sm flex items-center gap-1">
+            Explore resource
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </span>
         </div>
       </a>
     `;

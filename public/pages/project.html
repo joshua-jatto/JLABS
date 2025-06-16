@@ -6,51 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JLABS</title>
   <link rel="stylesheet" href="/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+
 
 </head>
 
-<body>
+<body class="font-code relative">
   <!-- leftCurtain -->
-  <div class="bg-purple-800 h-full w-[20px]  md:w-[50px] fixed top-0 left-0"></div>
+  <div class="bg-purple-800 h-full w-[20px]  md:w-[30px] fixed top-0 left-0"></div>
   <!-- rightCurtain -->
-  <div class="bg-purple-800 h-full w-[20px]  md:w-[50px] fixed top-0 right-0 "></div>
-  <div class="flex items-center justify-between  w-[calc(100vw-100px)]">
+  <div class="bg-purple-800 h-full w-[20px]  md:w-[30px] fixed top-0 right-0 "></div>
+<header class="flex items-center justify-between w-[calc(100vw-100px)]">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full mx-auto   shadow-md text-black z-10">
+    <nav
+      class="glass backdrop-blur-md  rounded-xl shadow-lg border-white/30 p-0 fixed bg-white/70 top-0 w-full mt-4 md:w-full md:ml-0 md:rounded-none md:mt-0  mx-auto  z-50">
       <div class="container mx-auto flex items-center justify-between p-4">
-        <a href="/" class="ml-2 text-xl font-bold">JLABS🧪</a>
+        <h1 class="ml-2 text-xl font-bold z-10">JLABS🛡️</h1>
         <div class="flex flex-row gap-5">
        
-          <button id="menuToggle" class="md:hidden text-2xl focus:outline-none mr-2">
-            ☰
-          </button>
-          <ul id="navLinks" class="hidden md:flex space-x-6 mr-2">
-            <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
-            <a href="/pages/about.html" class="hover:text-gray-400">About</a>
-            </li>
-            <li><a href="/pages/project.html" class="hover:text-gray-400">Projects</a></li>
-            <li>
-  
-          </ul>
-  
-          <button id="darkModeToggle" class=" text-white bg-black rounded-full text-xl focus:outline-none mr-2">
-            🌙
-          </button>
-        </div>
+        <button id="menuToggle" class="md:hidden text-2xl text-black dark:text-green-400 focus:outline-none mr-2">
+          ☰
+        </button>
+        <ul id="navLinks" class="hidden md:flex space-x-6 mr-2">
+          <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+          <a href="/pages/about.html" class="hover:text-gray-400">About</a>
+          </li>
+          <li><a href="/pages/project.html" class="hover:text-gray-400">Projects</a></li>
+          <li>
+
+        </ul>
+
+        <button id="darkModeToggle" class=" text-white bg-black rounded-full text-xl focus:outline-none mr-2">
+          🌙
+        </button>
+      </div>
       </div>
     </nav>
     <!--mobile view-->
     <ul id="mobileNavLinks"
-      class="hidden flex-col text-zinc-100 mx-auto items-center justify-evenly bg-purple-700 shadow-md font-semibold rounded-md space-x-2 mt-20 min-w-[40vw] min-h-[25vh] p-4 fixed right-6 top-0 scale-100 opacity-90 ">
+      class="hidden flex-col z-20 text-zinc-100 mx-auto items-center justify-evenly bg-zinc-900 shadow-md  font-semibold rounded-md space-x-2 mt-20 min-w-[30vw] min-h-[25vh] p-4 fixed right-10 top-2 scale-100 opacity-95 ">
       <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
-      
-        <a href="/pages/about.html" class="hover:text-gray-400">About</a>
+
+      <a href="/pages/about.html" class="hover:text-gray-400">About</a>
       </li>
-      <li><a hrhref="/pages/project.html" class="hover:text-gray-400">Projects</a></li>
+
+      <li><a href="/pages/project.html" class="hover:text-gray-400">Project</a></li>
     </ul>
 
-  </div>
+  </header>
 
 
   <!-- project Content -->
@@ -73,9 +77,11 @@
 
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-black p-4">
+  <footer class="bg-gray-800 text-black p-4 z-50">
     <div class="container mx-auto text-center">
-      <p>&copy; 2024 JLABS<span class="test-tube">🧪</span>. All rights reserved.</p>
+      <p>&copy; 2024 JLABS🛡️. All rights reserved.</p>
+      <div id="clock" class="text-center text-sm text-gray-300 mt-4"></div>
+
     </div>
   </footer>
 

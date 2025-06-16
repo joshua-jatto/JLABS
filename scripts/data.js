@@ -21,19 +21,19 @@
 
 const projectData = [
     {
-      title: "Portfolio Website",
+      title: "JLABS-CSQD",
       author: "Joshua Jatto",
-      date: "2024-11-01",
-      image: "/images/LBG.jpg",
-      description: "A personal portfolio site built with React, Tailwind CSS, and Vite.",
+      date: "2025-06-15",
+      image: "/images/jlabs-csqd-lp.png",
+      description: "Gamified Quizzes for cyber security enthusiats",
       // techStack: [
       //   { name: "React.js", icon: "/icons/react.svg" },
       //   { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
       //   { name: "Vite", icon: "/icons/vite.svg" }
       // ],
       repoLink: "https://github.com/joshua-jatto/portfolio-website",
-      isLive: false,
-      liveLink: "/"
+      isLive: true,
+      liveLink: "https://cyber-security-quiz-dash-9q80ryrgt-joshua-jattos-projects.vercel.app/"
     },
     {
       title: "Speedy Fabricator",

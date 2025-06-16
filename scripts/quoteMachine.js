@@ -1,53 +1,50 @@
-const quotes =  [
-  {
-    quote: "I loved you first",
-    quoter: "Jesus IAmthatIAm",
-  },
-
-  {
-    quote: "God is always present, He's here now.",
-    quoter: "I. MaryAnne",
-  },
-
-  {
-    quote: "Only God knows how best to help a man",
-    quoter: "S. Mone",
-  },
-  {
-    quote: "How be it, It shall come to pass",
-    quoter: "E. Gloria",
-  },
-  {
-    quote: "...part of the journey is the end.",
-    quoter: "Tony",
-  },
-  {
-    quote: " In the end, it's you and God.",
-    quoter: " J. Rebecca",
-  },
-  {
-    quote: " Insist on winning",
-    quoter: "O. Stephanie ",
-  },
-  {
-    quote:
-      "...comes great power, comes great responsibilty / To whom much is given, much shall be required.",
-    quoter: "SpiderMan / st. Luke 12:48b",
-  },
+const cyberSecurityTips = [
+  "Use strong, unique passwords for every account.",
+  "Use password managers.",
+  "HTTPS tends to be more secure than HTTP.",
+  "Enable two-factor authentication (2FA) wherever possible.",
+  "Keep your OS, apps, and browsers updated.",
+  "Avoid suspicious links and attachments in emails.",
+  "Use a password manager to store credentials.",
+  "Avoid public Wi-Fi unless you're using a VPN.",
+  "Lock your screen when away from your device.",
+  "Back up your data regularly to a secure location.",
+  "Be cautious of phishing—verify senders.",
+  "Never reuse passwords across sites.",
+  "Install antivirus and anti-malware tools.",
+  "Check app permissions before installation.",
+  "Verify URLs before entering login details.",
+  "Disable Bluetooth when not in use.",
+  "Secure home Wi-Fi with WPA3 encryption.",
+  "Use encrypted messaging for sensitive info.",
+  "Log out of shared/public devices.",
+  "Clear browser cache and cookies regularly.",
+  "Audit your online presence frequently.",
+  "Stay informed. Cybersecurity is ever-evolving."
 ];
 
-//qoutes-machine // rendering of qoutes to index.html landing section
-function quoteMachine(quotes) {
-  let magicNum = Math.floor(Math.random() * quotes.length);
-  const quotesBox = document.getElementById("quote-box");
+let currentTip = 0;
+const quoteBox = document.getElementById("quote-box");
 
-  for (let i = magicNum; i <= quotes.length; i++) {
-    quotesBox.innerText = quotes[i].quote + "\n~" + quotes[i].quoter;
-    quotesBox.classList += "animate-fade-in font-semibold";
-    break;
-  };
+function showNextTip() {
+  if (!quoteBox) return;
+
+  quoteBox.innerText = `> ${cyberSecurityTips[currentTip]}`;
+
+  // Animate
+  quoteBox.classList.remove("animate-fade-in");
+  void quoteBox.offsetWidth; // Reflow to restart animation
+  quoteBox.classList.add("animate-fade-in");
+
+  // Next index
+  currentTip = (currentTip + 1) % cyberSecurityTips.length;
 }
 
+// Start immediately
+showNextTip();
+setInterval(showNextTip, 5000);
+
+
 document.addEventListener("DOMContentLoaded",()=>{
-  quoteMachine(quotes)
+  quoteMachine(cyberSecurityTips)
 })
