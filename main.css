@@ -18,13 +18,14 @@ body.day p
   color: rgb(10, 8, 8);
   text-shadow: #080c0f;
 }
-body.day a{
+
+body.day footer{
   color:white
 }
 
 body.day nav,
 body.day footer p{
-  color: #f5f7f8;
+  color:rgb(10, 8, 8);
   backdrop-filter: blur(12px);
   transition: all 0.3s ease;
   z-index: 100;
@@ -70,17 +71,6 @@ body.night section blockquote
   background: #313131d7;
 
 }
-
-/* body.day .text-bg{
-  color:#1c1c1c;
-  background: linear-gradient(#31313131);
-
-
-} */
-
-/* body.day{
-  color: white;
-} */
 
 body.night nav,
 body.night footer {

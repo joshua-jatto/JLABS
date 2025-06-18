@@ -17,7 +17,7 @@ function loadRecentprojects(containerId, data) {
   // container.classList.remove("flex", "flex-row", "justify-center");
   
   data.forEach((item) => {
-    const card = document.createElement("section");
+    const card = document.createElement("div");
     card.className = "w-full h-full transition-all duration-300 hover:scale-[1.02]";
     
     card.innerHTML = `
