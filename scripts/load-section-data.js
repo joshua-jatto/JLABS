@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Handles loading of recent projects to HTML
 function loadRecentprojects(containerId, data) {
   const container = document.getElementById(containerId);
-  // Remove existing flex classes to use grid layout
-  // container.classList.remove("flex", "flex-row", "justify-center");
+
   
   data.forEach((item) => {
     const card = document.createElement("div");
@@ -38,8 +37,7 @@ function loadRecentprojects(containerId, data) {
 // Handles loading of learning resources links to HTML
 function loadArticles(containerId, data) {
   const container = document.getElementById(containerId);
-  // Remove existing flex classes to use grid layout
-  // container.classList.remove("flex", "flex-col", "items-center");
+
   
   data.forEach((item) => {
     const card = document.createElement("div");
@@ -54,10 +52,8 @@ function loadArticles(containerId, data) {
           <h2 class="text-white text-lg font-bold mb-2 group-hover:text-purple-400 transition-colors">${item.title}</h2>
           <p class="text-gray-400 text-sm md:text-base flex-1 line-clamp-3 truncate(10)">${item.description}</p>
           <span class="mt-4 text-purple-500 font-medium text-sm flex items-center gap-1">
-            Explore resource
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-            </svg>
+            Explore resource →
+           
           </span>
         </div>
       </a>
