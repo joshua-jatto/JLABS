@@ -9,8 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="icon" href="/images/JTHD.png" type="image/png" />
 
-  <script type="module" crossorigin src="/assets/index-CjYbOYQO.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BfxqMV2S.css">
+  <script type="module" crossorigin src="/assets/index-Co18ID84.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-nmYo7S6T.css">
 </head>
 
 <body class="font-code relative">
@@ -32,11 +32,11 @@
         </button>
         <ul id="navLinks" class="hidden md:flex space-x-6 mr-2">
           <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+          <li><a href="/pages/learning.html" class="hover:text-gray-400">Learning</a></li>
           <a href="/pages/about.html" class="hover:text-gray-400">About</a>
           </li>
           <li><a href="/pages/project.html" class="hover:text-gray-400">Projects</a></li>
           <li>
-
         </ul>
 
         <button id="darkModeToggle" class=" text-white bg-black rounded-full text-xl focus:outline-none mr-2">
@@ -49,8 +49,8 @@
     <ul id="mobileNavLinks"
       class="hidden flex-col z-20 text-zinc-100 mx-auto items-center justify-evenly bg-zinc-900 shadow-md  font-semibold rounded-md space-x-2 mt-20 min-w-[30vw] min-h-[25vh] p-4 fixed right-10 top-2 scale-100 opacity-95 ">
       <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
-
-      <a href="/pages/about.html" class="hover:text-gray-400">About</a>
+      <li><a href="/pages/learning.html" class="hover:text-gray-400">Learning</a></li>
+       <a href="/pages/about.html" class="hover:text-gray-400">About</a>
       </li>
 
       <li><a href="/pages/project.html" class="hover:text-gray-400">Project</a></li>
@@ -59,8 +59,7 @@
   </header>
 
   <!-- Landing Page / home -->
-
-  <section id="home" class="relative flex items-center  justify-center mt-[5rem]  min-h-[80vh] bg-transparent text-black dark:text-white  overflow-hidden transition-colors duration-500">
+<section id="home" class="relative flex items-center  justify-center mt-[5rem]  min-h-[80vh] bg-transparent text-black dark:text-white  overflow-hidden transition-colors duration-500">
     
     <!-- Cyber pattern background -->
     <div class="absolute bg-[url('/images/animated-tech-mesh-green.svg')] md:top-[5rem] bg-contain opacity-10 dark:opacity-20 z-0"></div>
@@ -115,39 +114,88 @@
   
 <!-- Recent Projects Section -->
     <section class="relative z-10 backdrop-blur-md   border border-white/30 dark:border-white/10 rounded-2xl p-8 md:p-16 shadow-xl max-w-5xl mx-4 md:mx-auto flex flex-col items-center gap-10 transition-all duration-500">
-  
 
-    
 
-<!-- Recent Section -->
+    <div class="mb-16 glass p-4 ">
+      <h2 class="font-bold text-xl md:text-4xl text-center text-black dark:text-green-300  animate-pulse mb-4 tracking-tight">
+        Recent Projects:
+      </h2>
+      <p class="text-bg text-sm md:text-base text-center text-gray-300 dark:text-gray-400 font-medium mb-6">
+        Project may still be under construction <br />
+        Explore→
+      </p>
+      <div id="recent-projects" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+        <!-- Dynamic cards will be appended here by JavaScript -->
+      </div>
+    </div>
 
-<div class="mb-16 glass p-4 ">
-  <h2 class="font-bold text-xl md:text-4xl text-center text-black dark:text-green-300  animate-pulse mb-4 tracking-tight">
-    Recent Projects:
-  </h2>
-  <p class="text-bg text-sm md:text-base text-center text-gray-300 dark:text-gray-400 font-medium mb-6">
-    Project may still be under construction <br />
-    Explore→
-  </p>
-  <div id="recent-projects" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-    <!-- Dynamic cards will be appended here by JavaScript -->
+  <div class="mb-16 glass p-4 ">
+    <h2 class="font-bold text-xl md:text-4xl text-center text-black dark:text-green-300  animate-pulse mb-4 tracking-tight">
+      Skill-Up with JLABS🛡️
+    </h2>
+    <p class="text-bg text-sm md:text-base text-center text-gray-300 dark:text-gray-400 font-medium mb-6">
+      Kindly click on your region/group to apply<br />
+      Get started→
+    </p>
+    <div id="tutorial-grps" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Tutorial card -->
+    <div class="flex flex-col h-min border-slate-100 border rounded-lg overflow-hidden bg-white/10 backdrop-blur-md">
+      <img 
+        src="/images/feature-cards.png" 
+        alt="feature-cards" 
+        class="w-full h-40 sm:h-40 object-cover"
+      >
+      
+      <div class="p-4 flex flex-col flex-grow text-left">
+        <div class="mb-2">
+          <h2 class="text-lg font-semibold text-white truncate">Gubi 6-weeks ICP</h2>
+          <p class="text-zinc-500 text-xs mt-0.5 animate-pulse">Hello GUBITES</p>
+        </div>
+        
+        <p class="text-sm text-white dark:text-zinc-400 mb-3 flex-grow leading-relaxed">
+         Invest in your future with our 6-Week Hands-On Mentorship Program in Web Development, Bash Scripting, and Python.
+Learn practical skills, build projects, and get one-on-one guidance to kickstart your career in tech.
+
+        </p>
+        
+        <div class="flex items-center justify-between pt-3 border-t border-zinc-200 dark:border-zinc-700 text-sm">
+          <a 
+            href="/pages/learning.html" 
+            target="_blank" 
+            class="text-primary hover:text-primary/80 transition-colors duration-200 flex items-center gap-1"
+          >
+            <i></i>
+            <span>Learn more</span>
+          </a>
+          
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfZdP2Ei4i0LPqeIInZr0N8Bvjzn_F3gemS2sRnhYWSgzpsIw/viewform?usp=dialog" 
+            target="_blank" 
+            class="text-primary hover:bg-primary/90 px-3 py-1.5 rounded-md font-medium flex items-center gap-1 transition-colors duration-200"
+          >
+            <i></i>
+            <span>Apply</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<div class="mb-16 glass p-4 ">
-  <h2 class="font-bold text-xl md:text-4xl text-center text-black dark:text-green-300  animate-pulse mb-4 tracking-tight">
-    Learn 2 Code:
-  </h2>
-  <p class="text-bg text-sm md:text-base text-center text-gray-300 dark:text-gray-400 font-medium mb-6">
-    Wanna get started in tech? <br />
-    Check out these amazing resources!
-  </p>
-  <div id="learn-coding" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-    <!-- Dynamic cards will be appended here by JavaScript -->
+
+  <div class="mb-16 my-16 glass p-4 ">
+    <h2 class="font-bold text-xl md:text-4xl text-center text-black dark:text-green-300  animate-pulse mb-4 tracking-tight">
+      Learn 2 Code:
+    </h2>
+    <p class="text-bg text-sm md:text-base text-center text-gray-300 dark:text-gray-400 font-medium mb-6">
+      Wanna get started in tech? <br />
+      Check out these amazing resources!
+    </p>
+    <div id="learn-coding" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+      <!-- Dynamic cards will be appended here by JavaScript -->
+    </div>
   </div>
-</div>
 
 
-  </section>
+</section>
 
 
   <!-- Footer -->
