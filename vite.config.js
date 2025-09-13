@@ -1,6 +1,6 @@
 // vite.config.js
 export default {
-  // base:'/index.html',
+  base:'./',
       css: {
       postcss: './postcss.config.js',
     },
