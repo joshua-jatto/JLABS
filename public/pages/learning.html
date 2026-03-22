@@ -11,12 +11,8 @@
 
 </head>
 
-<body class="font-code">
-  <!-- leftCurtain -->
-  <div class="bg-purple-800 h-full w-[20px] md:w-[30px] fixed top-0 left-0"></div>
-  <!-- rightCurtain -->
-  <div class="bg-purple-800 h-full w-[20px] md:w-[30px] fixed top-0 right-0"></div>
-  <header class="flex items-center justify-between w-[calc(100vw-100px)]">
+<body class="font-code overflow-x-hidden">
+  <header class="flex items-center justify-between w-full">
 
     <!-- Navbar -->
     <nav
@@ -24,31 +20,31 @@
       <div class="container mx-auto flex items-center justify-between p-4">
         <h1 class="ml-2 text-xl font-bold z-10">JLABS🛡️</h1>
         <div class="flex flex-row gap-5">
-       
-        <button id="menuToggle" class="md:hidden text-2xl text-black dark:text-green-400 focus:outline-none mr-2">
-          ☰
-        </button>
-        <ul id="navLinks" class="hidden md:flex space-x-6 mr-2">
-          <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
-          <li><a href="/pages/Learning.html" class="hover:text-gray-400">Learning</a></li>
-          <a href="/pages/about.html" class="hover:text-gray-400">About</a>
-          </li>
-          <li><a href="/pages/project.html" class="hover:text-gray-400">Projects</a></li>
-          <li>
 
-        </ul>
+          <button id="menuToggle" class="md:hidden text-2xl text-black dark:text-green-400 focus:outline-none mr-2">
+            ☰
+          </button>
+          <ul id="navLinks" class="hidden md:flex space-x-6 mr-2">
+            <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+            <li><a href="/pages/learning.html" class="hover:text-gray-400">Learning</a></li>
+            <a href="/pages/about.html" class="hover:text-gray-400">About</a>
+            </li>
+            <li><a href="/pages/project.html" class="hover:text-gray-400">Projects</a></li>
+            <li>
 
-        <button id="darkModeToggle" class=" text-white bg-black rounded-full text-xl focus:outline-none mr-2">
-          🌙
-        </button>
-      </div>
+          </ul>
+
+          <button id="darkModeToggle" class=" text-white bg-black rounded-full text-xl focus:outline-none mr-2">
+            🌙
+          </button>
+        </div>
       </div>
     </nav>
     <!--mobile view-->
     <ul id="mobileNavLinks"
       class="hidden flex-col z-20 text-zinc-100 mx-auto items-center justify-evenly bg-zinc-900 shadow-md  font-semibold rounded-md space-x-2 mt-20 min-w-[30vw] min-h-[25vh] p-4 fixed right-10 top-2 scale-100 opacity-95 ">
       <li><a href="/index.html" class="text-zinc-100 hover:text-gray-400">Home</a></li>
-          <li><a href="/pages/Learning.html" class="hover:text-gray-400">Learning</a></li>
+      <li><a href="/pages/Learning.html" class="hover:text-gray-400">Learning</a></li>
 
 
       <a href="/pages/about.html" class="text-zinc-100 hover:text-gray-400">About</a>
@@ -60,68 +56,161 @@
   </header>
 
   <section
-    class=" w-[95%] flex flex-col md:flex-col md:p-8 lg:p-10 justify-center items-start gap-2 mx-auto mt-[80px]  frenzy-background rounded-lg shadow-lg animate-fade-in"
+    class="w-screen flex flex-col md:flex-col md:p-8 lg:p-10 justify-center items-start gap-2 mx-auto mt-[80px]  frenzy-background rounded-lg shadow-lg animate-fade-in overflow-x-hidden"
     style="background-image: url('/img/')">
-
-    <!-- Overview Section -->
-    <section class="glass-card p-6 md:p-8 shadow-md top-10 relative z-10 backdrop-blur-md   border border-white/30 dark:border-white/10 rounded-2xl max-w-5xl mx-4 md:mx-auto flex flex-col items-start gap-10 transition-all duration-500">
-      <div>
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">About Gubi 6-weeks ICP</h2>
-      <div class="grid md:grid-cols-2 gap-6 items-center">
-        <div>
-          <p class="text-gray-700 leading-relaxed">
-             A practical, hands-on beginners' friendly mentorship program designed to give you real skills that matter in today’s tech-driven world. Over six weeks, you’ll gain in-demand knowledge in...<a class="text-fuchsia-600" href="https://drive.google.com/file/d/1IiX0cgRtEnxPfBFC4HFEgdEN3CMVkCk-/view?usp=sharing">Download overview</a>
-          </p>
-          
-        </div>
-        <div>
-          <img src="/images/female-tech-student.jpg" alt="Tutorial Overview" class="rounded-lg shadow-lg max-w-60 object-cover">
+    <!-- HERO SECTION - HACKER STYLE -->
+    <section class="animate-fade-in-up relative mx-auto md:-mt-[5rem] flex items-center justify-center text-center px-6 overflow-hidden">
+      <!-- Glitch overlay -->
+      <div
+        class="relative mx-auto z-10 max-w-4xl backdrop-blur-sm bg-black/30 p-8 md:p-12 rounded-3xl border border-green-500/30 shadow-2xl animate-fade-in">
+        <h1 class="font-code text-4xl md:text-6xl font-bold text-white mb-6 glitch"
+          data-text="Cyber Security & Ethical Hacking Bootcamp">
+          Cyber Security & Ethical Hacking Bootcamp
+        </h1>
+        <p class="font-code text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          Learn how cyber attacks happen and how to defend systems like a professional.
+          Start your journey into one of the fastest growing tech careers.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button
+          id="wa-connect"
+            class="group bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-lg font-code font-semibold transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,197,94,0.5)] flex items-center justify-center gap-2">
+            <span>Register Now</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </button>
+          <a href="https://drive.google.com/file/d/1IiX0cgRtEnxPfBFC4HFEgdEN3CMVkCk-/view?usp=sharing"
+             target="_blank"
+            class="border border-green-500/50 hover:border-green-400 px-8 py-4 rounded-lg font-code text-white hover:bg-green-500/10 transition-all duration-300 backdrop-blur-sm">
+            View Course Outline
+          </a>
         </div>
       </div>
-      
+
+
+    </section>
+    <!-- about the Bootcamp -->
+    <section
+      class="glass-card p-6 md:p-8  top-10 relative z-10 backdrop-blur-md rounded-3xl border border-green-500/30 shadow-2xl animate-fade-in  borderdark:border-white/10  max-w-5xl mx-4 md:mx-auto flex flex-col items-start gap-10 transition-all duration-500">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">About our Bootcamp (coming soon)</h2>
+        <div class="grid md:grid-cols-2 gap-6 items-center">
+          <div>
+            <p class="text-gray-700 leading-relaxed">
+              A practical, hands-on beginners' friendly mentorship program designed to give you real skills that matter
+              in today’s tech-driven world. Over eight weeks, you’ll gain in-demand knowledge in...<a
+                class="text-fuchsia-600"
+                href="https://drive.google.com/file/d/1IiX0cgRtEnxPfBFC4HFEgdEN3CMVkCk-/view?usp=sharing">Download
+                overview</a>
+            </p>
+
+          </div>
+          <div>
+            <img src="/images/female-tech-student.jpg" alt="Tutorial Overview"
+              class="rounded-lg shadow-lg max-w-60 object-cover hover:shadow-green-500/20 transition-all duration-300 hover:-translate-y-1">
+          </div>
+        </div>
+
       </div>
 
       <div>
-         <h2 class="text-2xl font-bold text-gray-900 mb-4">Course Details</h2>
-      <ul class="space-y-3 text-gray-700">
-        <li><strong>Duration:</strong> 6 Weeks (Intensive Cohort)</li>
-        <li><strong>Mode:</strong> Online / Physical Hybrid</li>
-        <li><strong>Level:</strong> Beginner to Intermediate</li>
-        <li><strong>Requirements:</strong> Laptop + Internet Access</li>
-        <li><strong>Pricing:</strong> ₦20,000 (students discount available)</li>
-      </ul>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Course Details</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li><strong>Duration:</strong> 8 Weeks (Intensive Cohort)</li>
+          <li><strong>Mode:</strong> Online / Physical Hybrid</li>
+          <li><strong>Level:</strong> Beginner to Intermediate</li>
+          <li><strong>Requirements:</strong> Laptop + Internet Access</li>
+          <li><strong>Pricing:</strong> ₦85,000 ()</li>
+        </ul>
 
       </div>
 
       <section class="glass-card p-6 md:p-8 shadow-md text-center">
-      
-      
-      <a 
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfZdP2Ei4i0LPqeIInZr0N8Bvjzn_F3gemS2sRnhYWSgzpsIw/viewform?usp=dialog" 
-        target="_blank" 
-        class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition"
-      >
-        Apply via Google Form
-      </a>
+
+
+        <a href="#"
+          target="_blank"
+          class="disabled inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">
+          Apply via Google Form
+        </a>
+      </section>
+
+
+      <!-- Overview Section -->
     </section>
-      
+    <!-- WHY THIS COURSE -->
+    <section class="relative py-20 px-6 overflow-hidden">
+      <!-- Background pattern -->
+      <div
+        class="absolute inset-0 bg-[url('/images/animated-tech-mesh-green.svg')] bg-cover opacity-10 dark:opacity-20">
+      </div>
+      <div class="relative z-10 max-w-6xl mx-auto">
+        <h2 class="font-code text-3xl md:text-5xl font-bold text-center text-gray-900 dark:text-green-400 mb-12">
+          Why Learn Cybersecurity?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="backdrop-blur-md bg-white/70 dark:bg-white/5 border border-white/30 dark:border-white/10 rounded-2xl p-8 shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 text-green-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
+              </svg>
+            </div>
+            <h3 class="font-code text-xl font-semibold text-gray-900 dark:text-white mb-2">High Global Demand</h3>
+            <p class="text-gray-700 dark:text-gray-400">
+              Cybersecurity professionals are among the most sought-after tech experts worldwide.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="backdrop-blur-md bg-white/70 dark:bg-white/5 border border-white/30 dark:border-white/10 rounded-2xl p-8 shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 text-green-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="font-code text-xl font-semibold text-gray-900 dark:text-white mb-2">Hands-On Skills</h3>
+            <p class="text-gray-700 dark:text-gray-400">
+              Learn practical techniques used by real security analysts and ethical hackers.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="backdrop-blur-md bg-white/70 dark:bg-white/5 border border-white/30 dark:border-white/10 rounded-2xl p-8 shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 text-green-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-code text-xl font-semibold text-gray-900 dark:text-white mb-2">Career Opportunities</h3>
+            <p class="text-gray-700 dark:text-gray-400">
+              Explore roles like Security Analyst, Ethical Hacker, and Penetration Tester.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Application Section -->
+
     
-
   </section>
-
-
   <!-- Footer -->
-   <footer class="bg-gray-800 text-black p-4">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2024 JLABS🛡️. All rights reserved.</p>
-      <div id="clock" class="text-center text-sm text-gray-300 mt-4"></div>
+    <footer class="bg-gray-800 text-black p-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 JLABS🛡️. All rights reserved.</p>
+        <div id="clock" class="text-center text-sm text-gray-300 mt-4"></div>
 
-    </div>
-  </footer>
-
+      </div>
+    </footer>
   <script type="module" src="/main.js" defer></script>
 </body>
 

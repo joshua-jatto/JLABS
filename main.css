@@ -3,7 +3,127 @@
 @tailwind components;
 @tailwind utilities;
 
+/* latest */
+@keyframes glitch {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
 
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.glitch {
+  position: relative;
+  animation: glitch 0.3s infinite;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.glitch::before {
+  color: #ff00c1;
+  z-index: -1;
+  animation: glitch 0.3s infinite;
+}
+.glitch::after {
+  color: #00ffc1;
+  z-index: -2;
+  animation: glitch 0.2s infinite;
+}
+@keyframes scroll-x {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* .animate-scroll-x {
+    animation: scroll-x 35s linear infinite;
+    display: inline-block;
+    width: max-content;
+
+  } */
+.scroll-content {
+  width: max-content;
+   animation: scroll-x 50s linear infinite;
+  display: inline-flex;
+  white-space: nowrap;
+}
+/* Matrix rain effect (simplified) */
+.matrix-rain {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 0, 0.1) 0px,
+    rgba(0, 0, 0, 0.5) 1px,
+    transparent 2px
+  );
+  background-size: 100% 3px;
+  animation: matrix 10s linear infinite;
+}
+@keyframes matrix {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 20px;
+  }
+}
+/* latest */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.duration-3000 {
+  transition-duration: 3000ms;
+}
 
 /* Default (Day) theme */
 body {
@@ -13,42 +133,39 @@ body {
 
 body.day h1,
 body.day h2,
-body.day p
- {
+body.day p {
   color: rgb(10, 8, 8);
   text-shadow: #080c0f;
 }
 
-body.day footer{
-  color:white
+body.day footer {
+  color: white;
 }
 
 body.day nav,
-body.day footer p{
-  color:rgb(10, 8, 8);
+body.day footer p {
+  color: rgb(10, 8, 8);
   backdrop-filter: blur(12px);
   transition: all 0.3s ease;
   z-index: 100;
-
-  
 }
 
 /* Glass effect styles */
 .glass {
-    /* background: rgba(30, 30, 60, 0.25); */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.075);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    transition: all 0.3s ease;
+  /* background: rgba(30, 30, 60, 0.25); */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .glass:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 /* Night theme */
@@ -61,15 +178,12 @@ body.night h2,
 body.night p,
 body.night a {
   color: #7fffd4;
-
 }
 
 /* text-bg */
-body.night section blockquote
-{
+body.night section blockquote {
   color: #7fffd4;
   background: #313131d7;
-
 }
 
 body.night nav,
@@ -81,7 +195,6 @@ body.night a:hover {
   color: #9bd4cb; /* Lighter aqua on hover */
 }
 
-
 .animate-fade-in {
   animation: fadeIn 1s ease-out forwards;
 }
@@ -91,7 +204,7 @@ body.night a:hover {
 }
 
 /* Test tube tilt effect on hover */
-.shield  {
+.shield {
   display: inline-block;
   transition: transform 0.3s ease;
 }
@@ -100,14 +213,23 @@ body.night a:hover {
   transform: rotate(-15deg);
 }
 
-
 /* Keyframes for continuous tilt */
 @keyframes continuousTilt {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-15deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(15deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* Default style */
@@ -132,15 +254,18 @@ body.night a:hover {
 .frenzy-background {
   position: relative;
   min-height: 100vh; /* Full height of the viewport */
-  background: linear-gradient(145deg, rgba(128, 0, 128, 0.8), rgba(75, 0, 130, 0.6));
+  background: linear-gradient(
+    145deg,
+    rgba(128, 0, 128, 0.8),
+    rgba(75, 0, 130, 0.6)
+  );
   overflow: hidden; /* Hide overflow for shapes */
 }
-
 
 /* Abstract shapes */
 .frenzy-background::before,
 .frenzy-background::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 300px;
   height: 300px;
@@ -177,9 +302,8 @@ body.night a:hover {
 /* nav active link */
 .active-link {
   font-weight: bold;
-  color: #7C3AED; /* Customize to your theme color */
+  color: #7c3aed; /* Customize to your theme color */
 }
-#mobileNavLinks{
+#mobileNavLinks {
   z-index: 100;
 }
-

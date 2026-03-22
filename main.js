@@ -54,9 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (waConnect) {
     waConnect.addEventListener("click", () => {
       // Replace PHONE_NUMBER with the desired phone number, including country code.
-      const phoneNumber = "+2348127967257";
+      const phoneNumber = "+2348165475448";
       const message = encodeURIComponent(
-        "Hello Joshua, can we collabrate on....?"
+        "Hello my name is......I'm interested in ....??"
       );
       const url = `https://wa.me/${phoneNumber}?text=${message}`;
       window.location.href = url;

@@ -1,7 +1,7 @@
 const cyberSecurityTips = [
   "Use strong, unique passwords for every account.",
   "Use password managers.",
-  "HTTPS tends to be more secure than HTTP.",
+  "Ensure your web pages use HTTPS not HTTP.",
   "Enable two-factor authentication (2FA) wherever possible.",
   "Keep your OS, apps, and browsers updated.",
   "Avoid suspicious links and attachments in emails.",
